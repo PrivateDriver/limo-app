@@ -5,6 +5,9 @@
 <div id="companies">
   <% @companies.each do |company| %>
     <%= render company %>
+    <h2>
+      <%= company.business_name %>
+    </h2>
     <p>
       <%= link_to "Show this company", company %>
     </p>

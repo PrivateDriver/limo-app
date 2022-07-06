@@ -4,6 +4,7 @@ class CreateCompanies < ActiveRecord::Migration[7.0]
       t.string :business_name
       t.string :owner_name
       t.string :phone_primary
+      t.string :email
       t.string :ein
       t.string :insurance_policy_number
       t.string :insurance_phone

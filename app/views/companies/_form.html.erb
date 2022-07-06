@@ -11,6 +11,41 @@
     </div>
   <% end %>
 
+ <div class="form-group">
+    <%= form.label :business_name %>
+    <%= form.text_field :business_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :owner_name %>
+    <%= form.text_field :owner_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone_primary %>
+    <%= form.text_field :phone_primary, class: 'form-control' %>
+  </div>
+
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: 'form-control' %>
+    </div>
+
+  <div class="form-group">
+    <%= form.label :ein %>
+    <%= form.text_field :ein, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :insurance_policy_number %>
+    <%= form.text_field :insurance_policy_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :insurance_phone %>
+    <%= form.text_field :insurance_phone, class: 'form-control' %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

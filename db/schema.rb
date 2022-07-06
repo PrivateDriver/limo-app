@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_180512) do
     t.string "business_name"
     t.string "owner_name"
     t.string "phone_primary"
+    t.string "email"
     t.string "ein"
     t.string "insurance_policy_number"
     t.string "insurance_phone"
