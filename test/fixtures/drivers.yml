@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  social_security: MyString
+  phone_primary: MyString
+  license: MyString
+  cdl: false
+  concealed_weapons: false
+  armed_security: false
+  background_verified: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  social_security: MyString
+  phone_primary: MyString
+  license: MyString
+  cdl: false
+  concealed_weapons: false
+  armed_security: false
+  background_verified: false
