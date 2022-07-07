@@ -1,0 +1,57 @@
+<%= form_with(model: driver) do |form| %>
+  <% if driver.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
+
+      <ul>
+        <% driver.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: 'form-control' %>
+  </div>
+    
+  <div class="form-group">
+    <%= form.label :social_security %>
+    <%= form.text_area :social_security, class: 'form-control' %>
+  </div>  
+
+  <div class="form-group">
+    <%= form.label :phone_primary %>
+    <%= form.text_field :phone_primary, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :license %>
+    <%= form.text_field :license, class: 'form-control' %>
+  </div>  
+
+  <div class="form-group">
+    <%= form.label :cdl %>
+    <%= form.text_field :cdl, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :concealed_weapons %>
+    <%= form.text_field :concealed_weapons, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :armed_security %>
+    <%= form.text_field :armed_security, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :background_verified %>
+    <%= form.text_field :background_verified, class: 'form-control' %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

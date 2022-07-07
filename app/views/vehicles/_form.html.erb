@@ -1,0 +1,46 @@
+<%= form_with(model: vehicle) do |form| %>
+  <% if vehicle.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+        <% vehicle.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.select :vin, Driver.all.map { |d| [d.first_name, d.id] } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :make %>
+    <%= form.text_field :make, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :model %>
+    <%= form.text_field :model, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :year %>
+    <%= form.text_field :year, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :seating_capacity %>
+    <%= form.text_area :seating_capacity, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup %>
+    <%= form.datetime_select :pickup %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
