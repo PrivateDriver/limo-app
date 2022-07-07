@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :drivers
   root to: "companies#index"
 
   resources :companies
