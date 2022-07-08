@@ -1,6 +1,58 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @driver %>
+<p id="notice"><%= notice %></p>
+
+<li class="list-group-item list-group-item-light">
+  <strong>First Name:</strong>
+  <%= @driver.first_name %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @driver.last_name %>
+</p>
+
+<p>
+  <strong>Social Security:</strong>
+  <%= @driver.social_security %>
+</p>
+
+<p>
+  <strong>Phone Primary:</strong>
+  <%= @driver.phone_primary %>
+</p>
+
+<p>
+  <strong>Drivers License:</strong>
+  <%= @driver.license %>
+</p>
+
+<p>
+  <strong>CDL:</strong>
+  <%= @driver.cdl %>
+</p>
+<p>
+  <strong>Concealed Weapon:</strong>
+  <%= @driver.concealed_weapons %>
+</p>
+<p>
+  <strong>Armend Security:</strong>
+  <%= @driver.armed_security %>
+</p>
+<p>
+  <strong>Background Verification:</strong>
+  <%= @driver.background_verified %>
+</p>
+
+<h1>New driver</h1>
+
+<%= render "form", driver: @driver %>
+
+<br>
+
+<div>
+  <%= link_to "Back to drivers", drivers_path %>
+</div>
 
 <div>
   <%= link_to "Edit this driver", edit_driver_path(@driver) %> |
