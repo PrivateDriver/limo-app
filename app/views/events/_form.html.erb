@@ -1,15 +1,80 @@
-<%= form_with(model: event) do |form| %>
+<%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
-    <div style="color: red">
+    <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
       <ul>
-        <% event.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :driver_id %>
+    <%= form.select :driver_id, Driver.all.map { |d| [d.first_name, d.id] } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :client_name %>
+    <%= form.text_field :client_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :client_phone %>
+    <%= form.text_field :client_phone, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :client_email %>
+    <%= form.text_field :client_email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :client_address %>
+    <%= form.text_area :client_address, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup %>
+    <%= form.datetime_select :pickup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dropoff %>
+    <%= form.datetime_select :dropoff %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :milage_out %>
+    <%= form.number_field :milage_out, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :milage_return %>
+    <%= form.number_field :milage_return, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :driver_comment %>
+    <%= form.text_area :driver_comment, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :client_comment %>
+    <%= form.text_area :client_comment, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pickup_location %>
+    <%= form.text_area :pickup_location, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :destination %>
+    <%= form.text_area :destination, class: 'form-control' %>
+  </div>
 
   <div>
     <%= form.submit %>

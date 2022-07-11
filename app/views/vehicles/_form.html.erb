@@ -10,6 +10,35 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.select :vin, Driver.all.map { |d| [d.first_name, d.id] } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :make %>
+    <%= form.text_field :make, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :model %>
+    <%= form.text_field :model, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :year %>
+    <%= form.text_field :year, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :seating_capacity %>
+    <%= form.text_area :seating_capacity, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup %>
+    <%= form.datetime_select :pickup %>
+  </div>
 
   <div>
     <%= form.submit %>
