@@ -1,6 +1,6 @@
 Trestle.resource(:vehicles) do
   menu do
-    item :vehicles, icon: "fa fa-star"
+    item :vehicles, icon: "fa fa-car"
   end
 
   # Customize the table columns shown on the index view.

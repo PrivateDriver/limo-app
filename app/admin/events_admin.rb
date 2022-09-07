@@ -1,6 +1,6 @@
 Trestle.resource(:events) do
   menu do
-    item :events, icon: "fa fa-star"
+    item :events, icon: "fa fa-calendar-plus-o"
   end
 
   # Customize the table columns shown on the index view.
