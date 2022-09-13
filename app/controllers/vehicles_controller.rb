@@ -1,9 +1,11 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: %i[ show edit update destroy ]
-
+  
   # GET /vehicles or /vehicles.json
   def index
     @vehicles = Vehicle.all
+
+    render json: @vehicles
   end
 
   # GET /vehicles/1 or /vehicles/1.json

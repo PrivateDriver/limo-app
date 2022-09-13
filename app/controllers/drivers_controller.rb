@@ -4,6 +4,8 @@ class DriversController < ApplicationController
   # GET /drivers or /drivers.json
   def index
     @drivers = Driver.all
+
+    render json: @drivers
   end
 
   # GET /drivers/1 or /drivers/1.json
