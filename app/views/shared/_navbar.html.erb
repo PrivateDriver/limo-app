@@ -1,6 +1,16 @@
+<nav class="navbar navbar-default role="navigation">
+    <div class="container">
+        <div class= navbar-header>
+            <ul class="nav navbar-nav navbar-right">
 
-<ul>
-    <li> <%= link_to "Events", events_url %> </li>
-    <li> <%= link_to "Drivers", drivers_url %> </li>
-    <li> <%= link_to "Vehicles", vehicles_url %> </li>
-</ul>
+                <% if user_signed_in? %>
+                    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li><%= link_to "Sign In", new_user_session_path %></li>
+                    <li><%= link_to "Sign Up", new_user_registration_path %></li>
+                <% end %>
+
+            </ul>
+        </div>
+    </div>
+</nav>

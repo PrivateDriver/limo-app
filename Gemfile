@@ -72,3 +72,7 @@ group :test do
 end
 
 gem 'trestle'
+
+gem "devise", "~> 4.8"
+
+gem 'bootstrap', '~> 5.2.2'
