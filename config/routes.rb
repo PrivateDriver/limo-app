@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "companies#index"
+  root to: "home#index" 
 
   resources :vehicles
   resources :events
