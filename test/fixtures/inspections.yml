@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exterior_cleanliness: 1
+  interior_cleanliness: 1
+  comments: MyText
+
+two:
+  exterior_cleanliness: 1
+  interior_cleanliness: 1
+  comments: MyText
