@@ -47,6 +47,7 @@ gem "bootsnap", require: false
 
 # Authentication
 gem "devise"
+gem "devise-jwt", "~> 0.10.0"
 
 # Use Sass to process CSS
 gem "sassc-rails"
