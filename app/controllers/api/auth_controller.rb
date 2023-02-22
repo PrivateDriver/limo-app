@@ -3,7 +3,7 @@
 # To authenticate, POST to /api/auth with the following parameters:
 # {
 #   "user": {
-#     "email": "...."
+#     "email": "....",
 #     "password": "..."
 #   }
 # }
@@ -11,6 +11,11 @@
 # You will either get a 200 OK response with the following body:
 #
 # { "ok": true }
+#
+# There will also be a header of the following:
+# Authorization:	Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjc3MDkwMjUyLCJleHAiOjE2NzcwOTM4NTIsImp0aSI6ImFhNTcxYjBmLWM3MzAtNDg2ZS05NjdiLWExM2RhZTgwNGY5ZSJ9.Jbll8fg-Q6SVIYcXfkhy0_pEAWPFB1ahnbAA5EtBw3E
+#
+# This is the header you'll want to save and use for all future requests.
 #
 # or you will get a 401 Unauthorized response with no body.
 #
