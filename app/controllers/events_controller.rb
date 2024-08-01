@@ -66,7 +66,10 @@ class EventsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def event_params
-      params.require(:events).permit(:start_time, :end_time, :mileage, :created_at, :updated_at, :company_id, :vehicle_id)
+     def event_params
+    params.require(:event).permit(:name, :description, :start_time, :end_time).tap do |event_params|
+      event_params[:start_time] = event_params[:start_time].in_time_zone('Local') if event_params[:start_time].present?
+      event_params[:end_time] = event_params[:end_time].in_time_zone('Local') if event_params[:end_time].present?
     end
+  end
 end
