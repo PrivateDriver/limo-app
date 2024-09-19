@@ -31,7 +31,7 @@ class Api::AuthController < Devise::SessionsController
 
   def respond_with(user, _opts = {})
     if signed_in?
-      render json: {ok: signed_in?}
+      render json: {ok: signed_in?, user: resource }
     else
       head :unauthorized
     end
